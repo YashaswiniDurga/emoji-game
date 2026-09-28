@@ -1,0 +1,107 @@
+.emoji-list {
+  width: min(1000px, 92%);
+
+  margin: 0;
+  padding: 10px;
+
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
+}
+
+/* CARD */
+
+.emoji-item {
+  display: flex;
+  justify-content: center;
+}
+
+.emoji-button {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  padding: 25px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  border-radius: 26px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  box-shadow:
+    0 10px 25px rgba(176, 93, 148, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.emoji-button:hover {
+  transform: translateY(-7px) scale(1.03);
+
+  background: rgba(255, 255, 255, 0.9);
+
+  box-shadow:
+    0 18px 35px rgba(190, 83, 143, 0.2),
+    0 0 0 4px rgba(255, 155, 195, 0.12);
+}
+
+.emoji-button:active {
+  transform: scale(0.94);
+}
+
+/* EMOJI */
+
+.emoji-button img {
+  width: 100%;
+  max-width: 130px;
+
+  display: block;
+
+  object-fit: contain;
+
+  transition: transform 0.25s ease;
+}
+
+.emoji-button:hover img {
+  transform: scale(1.08) rotate(4deg);
+}
+
+/* TABLET */
+
+@media screen and (max-width: 800px) {
+  .emoji-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .emoji-button {
+    padding: 18px;
+    border-radius: 20px;
+  }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 500px) {
+  .emoji-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .emoji-button {
+    padding: 15px;
+    border-radius: 18px;
+  }
+}
