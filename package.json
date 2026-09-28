@@ -2,7 +2,7 @@
   "name": "emoji-game",
   "private": true,
   "version": "1.0.0",
-  "homepage": "https://github.com/YashaswiniDurga/emoji-game",
+  "homepage": "https://YashaswiniDurga.github.io/emoji-game",
   "engines": {
     "node": "^10.13 || 12 || 14 || 15",
     "npm": ">=6"
